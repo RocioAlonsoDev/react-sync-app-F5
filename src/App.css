@@ -1,0 +1,586 @@
+/*header*/
+#logo{
+    width: 150px;
+    margin: 0 0 0 5vw;
+    background-color: #F6F9FD;
+}
+#mainMenu{
+    width:80%;
+    flex-flow: row;
+    display: flex;
+    justify-content: end;
+    margin: 0;
+    background-color: #F6F9FD;
+}
+
+#mainMenu ul{
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2%;
+    padding: 15px 5vw 0 0;
+}
+
+nav a{
+    text-decoration: none;
+    color: #333333;
+    font-weight: 700;
+}
+
+#dropdown button{
+    border: none;
+    background-color: #F6F9FD;
+    color: #333333;
+    font-weight: 700;
+}
+
+nav a:hover,#dropdown button:hover{
+    color: #FF4B63;
+}
+
+#dropdownMenu{
+    background-color: #F6F9FD;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px #00000033;
+    display: none;
+    min-width: 200px;
+    padding: 10px;
+}
+
+#dropdownMenu a{
+    display: block;
+    padding: 10px;
+}
+
+#dropdown:hover #dropdownMenu{
+    display: block;
+}
+
+#download{
+    background-color: #F6F9FD;
+    border-radius: 50px;
+    border: 3px solid #FF4B63;
+    color: #FF4B63;
+    font-weight: 700;
+    padding: 5px 30px;
+}
+
+#download:hover{
+    background-color: #FF4B63;
+    color: #F6F9FD;
+}
+
+#mobileMenuDropdown{
+    background-color: #F6F9FD;
+    color: #FF4B63;
+    border: #FF4B63 3px solid;
+    border-radius: 5px;
+    display: none;
+    transform: translate(-30px,0);
+}
+
+@media only screen and (min-width:768px) and (max-width:1024px){
+    #download{
+        padding: 5px 10px;
+    }
+}
+
+@media only screen and (max-width:767px){
+    #mobileMenuDropdown{
+        display: block;
+    }
+    #mainMenu ul{
+        background-color: #E5EDF5;
+        position: absolute;
+        flex-flow:column wrap;
+        margin-top: 70px;
+        display: none;
+        width: 100vw;
+        z-index: -1;
+    }
+    #dropdown button{
+        background-color: #E5EDF5;
+    }
+}
+@keyframes mobileMenuDropdown{
+    0%{
+        transform: translate(200vw, 0);
+    }
+    100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+
+/*main*/
+main{
+    padding-top: 130px;
+    transition: padding-top 0.5s ease-in-out;
+    margin: 0;
+}
+
+/*decoration*/
+/*decoration*/
+#decoration{
+    width: 100%;
+    overflow: hidden;
+}
+#greenDiamond{
+    position: absolute;
+    top: 200px;
+    left: 20%;
+    width: 1vw;
+}
+#yellowCircle{
+    position: absolute;
+    top: 250px;
+    right: 20%;
+    width: 2vw;
+}
+#blueCircle{
+    position: absolute;
+    top: 550px;
+    left:10%;
+    width: 5vw;
+}
+
+/*banner*/
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    height: 70vh;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0;
+}
+
+#mainTitle{
+   font-size: 5vw;
+   font-weight: 700;
+}
+
+#banner p{
+    max-width:800px;
+    padding-top: 2%;
+    font-weight: 500;
+    color: #6C6C6C;
+}
+
+/*móvil e iconos*/
+#icons{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top:100px
+}
+#icons div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+#icons div div:hover{
+    animation: flipIcon 1s ease-in;
+}
+#icons div div{
+    border-radius: 50%;
+    width: 20vw;
+    max-width: 160px;
+    max-height: 160px;
+    height: 20vw;
+}
+#icons div i{
+    font-size: 10vw;
+}
+#icons div p{
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+#iconGoals{
+    background-color: #E8E3F9;
+    color: #A073E9;
+}
+#iconGoals:hover{
+    background-color: #A073E9;
+    color: #E8E3F9;
+}
+#iconAnalysis{
+    background-color: #D5F2ED;
+    color: #18C389;
+}
+#iconAnalysis:hover{
+    background-color: #18C389;
+    color: #D5F2ED;
+}
+#iconTasks{
+    background-color: #F7E1E7;
+    color: #FF4B63;
+}
+#iconTasks:hover{
+    background-color: #FF4B63;
+    color: #F7E1E7;
+}
+#iconSocial{
+    background-color: #F7EFD9;
+    color: #FFAA11;
+}
+#iconSocial:hover{
+    background-color: #FFAA11;
+    color: #F7EFD9;
+}
+#iconRocket{
+    background-color: #DDF0F9;
+    color: #46B0E5;
+}
+#iconRocket:hover{
+    background-color: #46B0E5;
+    color: #DDF0F9;
+}
+@keyframes flipIcon {
+    from {transform: rotateY(0)}
+    to {transform: rotateY(360deg)}
+}
+
+@media only screen and (min-width:870px){
+    #icons div i{
+        font-size: 80px;
+    }
+}
+@media only screen and (min-width:1000px){
+    #mainTitle{
+        font-size: 58pt;
+    }
+    #banner p{
+        font-size: 15pt
+    }
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+ 
+/*description*/
+#description,#features{
+    margin-top: 150px;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 150px 10% 0 10%;
+}
+#description img{
+    width: 50%;
+}
+#description article{
+    width: 50%;
+    margin-top: 30px;
+}
+#description article h2{
+    font-weight: 700;
+    font-size: 3vw;
+    margin-bottom: 40px;
+}
+#description article p,#description article ul{
+    color: #6C6C6C;
+    line-height: 30px;
+    font-weight: 500;
+}
+#description article ul{
+    margin-bottom: 40px;
+    list-style-type: square;
+}
+
+
+@media only screen and (max-width:767px){
+    #description article h2{
+        font-size: 20pt;
+    }
+    #description img{
+        width: 100%;
+    }
+    #description article{
+        width: 100%;
+    }
+}
+
+
+
+/*features*/
+#features{
+    background-color: #E5EDF5;
+    width:100%;
+    padding-bottom: 150px;
+}
+
+#features article,#features #featuresImgToggle{
+    width: 50%;
+}
+#featuresImgToggle{
+    margin-top: 40px;
+}
+
+#features img{
+    width: 80%;
+}
+
+.featuresOptions button{
+    background-color: #F6F9FD;
+    font-weight: 700;
+    border: none;
+    color: #6C6C6C;
+    padding: 10px;
+    width: 150px;
+    margin: 5px;
+}
+
+.featuresOptions button:hover{
+    color: #8F5CE3;
+}
+
+#featuresOptActive{
+    background-color: #8F5CE3;
+    color: #F6F9FD;
+}
+
+#featuresOptions{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#features p,#features li{
+    padding-top: 15px;
+    margin: 5px;
+    line-height: 30px;
+    color: #6C6C6C;
+}
+
+#features li{
+    list-style-image: url(../img/check.png);
+}
+
+@media only screen and (max-width:767px) {
+    #features{
+        flex-flow: column;
+    }
+    #features article,#features #featuresImgToggle{
+        width: 100%;
+    }
+    #features img{
+        width: 100%;
+    }
+}
+
+  
+  
+
+
+
+#tracking,#organize{
+    display:none
+}
+
+
+/*screens*/
+#screens{
+    padding: 120px 0;
+    text-align: center;
+}
+#screens h2{
+    font-weight: 700;
+    font-size: 3vw;
+}
+.screensReview{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    
+}
+.review{
+    width: 20vw;
+    margin: 100px 0;
+
+}
+.review i{
+    color: #FFAA11;
+    padding: 3px;
+}
+hr{
+    width: 30%;
+    margin: 20px auto;
+}
+#screens p{
+    font-style: italic;
+    color: #6C6C6C;
+    font-weight: 500;
+}
+#screens p:last-child{
+    font-style: normal;
+    color: #333333;
+}
+
+#screensLogos{
+    background-color: #FFFFFF;
+    padding: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    
+}
+#screensLogos img{
+    width: 200px;
+}
+@media only screen and (max-width:767px) {
+    #screens h2{
+        font-size: 20pt;
+    }
+    .screensReview{
+        flex-flow:column wrap;
+        align-items: center;
+        margin: 20px;
+    }
+    .review{
+        width: 80vw;
+        margin: 20px;
+    }
+}
+
+#reviewIcons{
+    background-color: #E5EDF5;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+}
+#reviewIcons div{
+    width: 250px;
+    text-align: center;
+    margin: 10px 10px;
+}
+#reviewIcons div i,#reviewIcons div h3{
+    font-size: 50pt;
+    font-weight: 700;
+}
+#reviewIcons div p{
+    font-weight: 700;
+    color: #6C6C6C;
+}
+#rIconGoals{
+    color: #A073E9;
+}
+#rIconAnalysis{
+    color: #18C389;
+}
+
+#rIconTasks{
+    color: #FF4B63;
+}
+#rIconSocial{
+    color: #FFAA11;
+}
+#rIconRocket{
+    color: #46B0E5;
+}
+
+/*bottom download area*/
+#bottomDownload{
+    padding: 120px 0;
+}
+#bottomDownload div{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+#bottomDownload p{
+    color: #6C6C6C;
+    font-weight: 500;
+    width: 45%;
+    margin:40px auto;
+    text-align: center;
+}
+@media only screen and (max-width:767px){
+    #bottomDownload p{
+        width: 90%;
+    }
+}
+
+/*footer*/
+footer{
+    border-top: #c7c7c7 0.5px solid;
+    padding-top: 50px;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-evenly;
+    color: #8E8E8E;
+}
+footer h3{
+    font-weight: 700;
+    font-size: 18px;
+}
+footer #socialMedia{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 15px;
+}
+footer #socialMedia div{
+    width: 50px;
+    height: 50px;
+    background-color: #6C6C6C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+footer #socialMedia div i{
+    font-size: 20pt;
+    margin: 15px;
+    color: #F6F9FD;
+}
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 35px;
+    font-weight: 500;
+}
+#copyright{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+footer section{
+    padding-left: 20px;
+}
+@media only screen and (max-width:767px){
+    footer{
+        flex-flow: column wrap;
+        align-content: center;
+        justify-content: center;
+    }
+    footer section{
+        width: 80%;
+    }
+}
+

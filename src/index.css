@@ -1,0 +1,70 @@
+/*general & repurposable*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+.buttons{
+    color: #F6F9FD;
+    font-weight: 700;
+    background-color: #FF4B63;
+    border: #FF4B63 3px solid;
+    border-radius: 50px;
+    padding: 10px 35px;
+    margin: 10px;
+}
+.buttons:hover{
+    color: #FF4B63;
+    background-color: #F6F9FD;
+}
+
+
+.buttonsAlternative{
+    color: #333333;
+    font-weight: 700;
+    background-color: #F6F9FD;
+    border: #333333 3px solid;
+    border-radius: 50px;
+    padding: 10px 35px;
+    margin: 10px;
+}
+.buttonsAlternative:hover{
+    color: #F6F9FD;
+    background-color: #333333;
+}
+.mobilePhoneArt img{
+    width: 100%;
+    max-width: 1500px;
+    padding: 0 10%;
+    margin:auto;
+}
+.mobilePhoneArt img:hover{
+    animation: shake 1s ease-in-out;
+}
+.mobilePhoneArt{
+    display: flex;
+    align-content: center;
+    flex-flow: column;
+}
+.active{
+    color: #FF4B63;
+}
+main{
+    padding-top: 130px;
+    transition: padding-top 0.5s ease-in-out;
+    margin: 0;
+    background-color: #F6F9FD;
+}
+
+nav{
+    width: 100%;
+    height: 130px;
+    position: fixed;
+    flex-flow: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6F9FD;
+    transition: height 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+    z-index: 100;
+}
